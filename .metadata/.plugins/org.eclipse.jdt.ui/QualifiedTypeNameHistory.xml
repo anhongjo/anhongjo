@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="com.sun.source.util.TreePath"/>
     <fullyQualifiedTypeName name="javax.swing.tree.TreePath"/>
     <fullyQualifiedTypeName name="java.util.Hashtable"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 </qualifiedTypeNameHistroy>

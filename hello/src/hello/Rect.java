@@ -1,25 +1,22 @@
 package hello;
 
-public class Rect {
-	int w, h;
-	
-	public Rect() {
-		this (6,10);
-	}
-	
-	public Rect(int w,int h) {
-		this.w = w;
-		this.h = h;
-		
-	}
-	
-	
-	public int getArea() {
-        return w * h;
-	}
+public class Rect extends Piece {
 
-}
+public Rect(TetrisData data) {
+super(data);
+c[0] = 0; r[0] = 0;
+c[1] = 1; r[1] = 0;
+c[2] = 0; r[2] = -1;
+c[3] = 1; r[3] = -1;
 
+ }
 
-  
+ public int getType() {//»ö±ò  1~7±îÁö 
+ return 7;
+ }
+
+ public int roteType() {
+ return 1;
+ }
+ }
    

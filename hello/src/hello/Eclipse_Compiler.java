@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
@@ -50,7 +51,7 @@ public class Eclipse_Compiler extends JFrame {
 	 * Create the frame.
 	 */
 	public Eclipse_Compiler() {
-		setTitle("Eclipse Compiler");
+		setTitle("\uD504\uB85C\uC81D\uD2B8");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		
@@ -190,6 +191,25 @@ public class Eclipse_Compiler extends JFrame {
 			}
 		});
 		mnNewMenu_2.add(mntmNewMenuItem_8);
+		
+		JMenu mnNewMenu_3 = new JMenu("\uC635\uC158");
+		menuBar.add(mnNewMenu_3);
+		
+		JMenuItem mntmNewMenuItem_9 = new JMenuItem("\uAC1C\uBC1C\uC790 \uC815\uBCF4 \uBCF4\uAE30");
+		mntmNewMenuItem_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				 new newWindow();
+	
+			}
+		});
+		mnNewMenu_3.add(mntmNewMenuItem_9);
+		
+		JMenuItem mntmNewMenuItem_1_1 = new JMenuItem("\uC18C\uC2A4 \uCF54\uB4DC \uCD9C\uB825 \uAE30\uB2A5");
+		mnNewMenu_3.add(mntmNewMenuItem_1_1);
+		
+		JMenuItem mntmNewMenuItem_2_1 = new JMenuItem("\uC904\uBC88\uD638 \uBCF4\uAE30");
+		mnNewMenu_3.add(mntmNewMenuItem_2_1);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -213,7 +233,27 @@ public class Eclipse_Compiler extends JFrame {
 		outputArea.setEditable(false);
 		scrollPane_1.setViewportView(outputArea);
 	}
-	
+public class newWindow extends JFrame {
+    // 버튼이 눌러지면 만들어지는 새 창을 정의한 클래스
+    newWindow() {
+        setTitle("개발자");
+        // 주의, 여기서 setDefaultCloseOperation() 정의를 하지 말아야 한다
+        // 정의하게 되면 새 창을 닫으면 모든 창과 프로그램이 동시에 꺼진다
+        
+        JPanel NewWindowContainer = new JPanel();
+        setContentPane(NewWindowContainer);
+        
+        JLabel NewLabel = new JLabel("183616 안홍조 163318 서욱현");
+      
+        
+        NewWindowContainer.add(NewLabel);
+        
+        setSize(300,100);
+        setResizable(false);
+        setVisible(true);
+    }
+}
+
 	// 현재 입력된 코드의 클래스 이름을 가져옴
 	public String getClassName() {
 		String className = inputArea.getText();
